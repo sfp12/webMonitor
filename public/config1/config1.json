@@ -1,0 +1,26 @@
+{
+    "config_name": "config1",
+    "snapshot": {
+        "snapshot_lines": {
+            "index0": "sfp1",
+            "index1": "sfp2",
+            "index2": "sfp3"
+        },
+        "columns": [
+            {
+                "name": "hashset 1",
+                "show": false
+            },
+            {
+                "name": "hashset 2",
+                "show": true
+            },
+            {
+                "name": "hashset 3",
+                "show": true
+            }
+        ]
+    },
+    "curve": [],
+    "users": []
+}

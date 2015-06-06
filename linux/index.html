@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WebMonitor</title>
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/stylesheets/bootstrap-table.css">
+	<link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+	<link rel="stylesheet" href="/stylesheets/style.css">  
+</head>
+<body>
+	<div class='container' id='container'>
+		<ul id="myTab" class="nav nav-tabs" >
+			<img src='images/wizardquant.png' style='float: left;margin-right: 63px;' />	
+			<li class="active"><a href="#snapshot_tab" data-toggle="tab">Snapshot</a></li>
+			<li><a href="#curve_tab" data-toggle="tab">Curve</a></li>
+			<li><a href="#user_tab" data-toggle="tab">User</a></li>
+		</ul>
+
+		<div id="myTabContent" class="tab-content">
+		 	<div class="tab-pane fade in active" id="snapshot_tab">
+		 		<div style='width: 82%;margin: 0 auto;margin-top: 20px;'>
+					<h1 class='snapshot_caption'>default</h1>
+					<button type="button" id='saveas' class="btn btn-success btn-sm saveas">SAVE AS</button>
+					<button type="button" id='save' class="btn btn-success btn-sm save">SAVE</button>
+					<div class="clearfix"></div>
+				</div>
+		  		<div class='s_s_c'>		
+					<div class='col-md-3 selector'>
+						<div class='selector_con'>
+							<table id="selector"></table>
+						</div>			
+					</div>
+
+					<div class='col-md-8 main'>						
+						<table id="snapshot" class='col-md-8'>					
+						</table>
+					</div>	
+					
+					<div class='col-md-1 config_con'>
+						<table id='config'></table>
+					</div>
+				</div>
+			</div>
+		 	<div class="tab-pane fade" id="curve_tab">
+		 		<div class='curve_container'>
+					<div id="pie" style="height:300px;width:674px;border:1px solid #ccc;padding:10px;"></div>
+					<div id="bar" style="height:300px;width:674px;border:1px solid #ccc;padding:10px;"></div>
+					<div class='k_container'>
+						<div id="k1" class="k_main" style='height:230px;width:1390px;margin-bottom:1px;padding-bottom:0;border-bottom-width:0'></div>
+			            <div id="k2" class="k_main" style='height:145px;width:1390px;margin-bottom:1px;padding:1px 10px;border-width:0 1px;'></div>
+			            <div id="k3" class="k_main" style='height:105px;width:1390px;padding-top:1px;border-top-width:0'></div>
+		            </div>
+				</div>		  		
+		 	</div>		 	
+		 	<div class="tab-pane fade" id="user_tab">
+		  		
+		 	</div>	 
+		</div>		
+	</div>
+
+	<div id="dialog_save" title="保存" style="font-size: 100%;">
+		<form style="margin:0;">
+			<fieldset style="padding:0; border:0; margin-top:25px;"><label for="name">名字:</label>
+				<input type="text" name="config_name" id="config_name" style="margin-bottom:12px; width:70%; padding: .4em;" class="text ui-widget-content ui-corner-all">
+			</fieldset>
+		</form>
+	</div>
+
+	<script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script src="/javascripts/bootstrap-table.js"></script>
+	<script src="/javascripts/main.js"></script>	
+
+	<script src="javascripts/echarts-all.js"></script>
+	<script src="/javascripts/curve.js"></script>
+	<script src="/javascripts/k.js"></script>
+</body>
+</html>

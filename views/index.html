@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WebMonitor</title>
+	<link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+	<div class='container'>
+	<table border='1' cellspacing='0' cellpadding='10' >
+		<!-- 表头 -->
+		<thead>			
+			<tr id='snapshot_th'>
+				<th id='reqstr'>RequestString</th>
+				<th data-visible='false'>OrderCounter</th>
+				<th>CanceledCounter</th>
+				<th>FilledCounter</th>
+				<th>PartlyFilledCounter</th>
+				<th>HangingCounter</th>
+				<th>CanceledRate</th>
+				<th>OpenFilledVol</th>
+				<th>OpenDesireVol</th>
+				<th>CloseFilledVol</th>
+				<th>CloseDesireVol</th>
+				<th>CancelVol</th>
+				<th>CancelVolRate</th>
+				<th>FilVolPerMin</th>				
+			</tr>
+		</thead>
+		<!-- 表体 -->
+		<tbody id='snapshot_tb'>
+			<td>*/IF1501/09:00:00,now</td>
+			<td>1153</td>
+			<td>315</td>
+			<td>868</td>
+			<td>30</td>
+			<td>0</td>
+			<td>0.273200</td>
+			<td>805</td>
+			<td>1092</td>
+			<td>799</td>
+			<td>980</td>
+			<td>468</td>
+			<td>0.225869</td>
+			<td>86.258849</td>			
+		</tbody>
+	</table>
+	</div>
+	<script src="/javascripts/jquery-2.1.1.js"></script>
+	<script>
+	var data = {};
+	data.name = 'default';
+
+	var success = function(data, ts){
+		console.log('data:'+JSON.stringify(data));
+	}
+	$.ajax({
+		type: 'GET',
+      	url: '/test',
+      	data: data,
+      	success: success,
+      	dataType: 'json'
+      	// contentType: "application/json; charset=utf-8"
+})
+	
+
+	</script>
+</body>
+</html>
